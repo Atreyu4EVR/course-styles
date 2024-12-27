@@ -1,0 +1,251 @@
+/* CSE 110: Introduction to Programming
+ * Course Style Guide
+ * 
+ * This stylesheet defines the standard visual elements for course materials,
+ * ensuring consistency across all course pages while maintaining BYU-Idaho's
+ * brand identity.
+ */
+
+/* Color Variables
+ * Using CSS variables for easy maintenance and consistency
+ */
+:root {
+  /* BYU-Idaho Brand Colors */
+  --byui-blue: #006eb6;
+  --byui-link: #214491;
+  --byui-accent: #5865f2; /* Discord-inspired accent color */
+
+  /* Neutral Colors */
+  --text-primary: #000000;
+  --text-secondary: #949598;
+  --background-light: #f8f9fa;
+  --border-light: #dddddd;
+
+  /* Feedback Colors - Updated to match brand theme */
+  --success: #0a8754; /* A deeper, more professional green */
+  --warning: #e6b43c; /* A warmer, more muted yellow */
+  --error: #c42847; /* A deeper red that complements byui-blue */
+  --info: #006eb6; /* Using byui-blue for consistency */
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--byui-blue);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 2px solid var(--byui-blue);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+
+/* Links */
+a {
+  color: var(--byui-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--byui-blue);
+}
+
+/* Content Containers */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.department {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: var(--text-secondary);
+}
+
+/* Notice Boxes */
+.notice {
+  background-color: var(--background-light);
+  border-left: 4px solid var(--byui-blue);
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.important-notice {
+  background-color: var(--background-light);
+  border-left: 4px solid var(--error);
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px 0;
+  background-color: white;
+}
+
+/* Code Formatting */
+code {
+  font-family: "Consolas", "Monaco", monospace;
+  background-color: var(--background-light);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--background-light);
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-light);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--background-light);
+  color: var(--byui-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Assignment-specific Styles */
+.assignment-header {
+  background-color: var(--background-light);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.due-date {
+  color: var(--error);
+  font-weight: bold;
+}
+
+/* Resource Links */
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: var(--background-light);
+  transition: background-color 0.2s ease;
+}
+
+.resource-link:hover {
+  background-color: var(--border-light);
+  text-decoration: none;
+}
+
+/* Status Indicators */
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.status-success {
+  background-color: var(--success);
+  color: white;
+}
+
+.status-warning {
+  background-color: var(--warning);
+  color: black;
+}
+
+.status-error {
+  background-color: var(--error);
+  color: white;
+}
